@@ -1,7 +1,7 @@
 // logger.js
 
 function sendLogToLogstash(logData) {
-    fetch('http://<217.18.52.61>:5044', {
+    fetch('http://217.18.52.61:5044', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
