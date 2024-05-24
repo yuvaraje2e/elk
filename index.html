@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--css and javascript reference-->
+    <link rel="stylesheet" href="style.css">
+    <link href="http://fonts.cdnfonts.com/css/playfair-display" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/delacorso" rel="stylesheet">            
+    <!--bootstrap required for javascript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
+    <!-- logo -->
+    <link rel="icon" href="assests/title.svg" type="image/icon type">
+    <title>SK STORYBOARD</title>
+</head>
+
+<body>
+
+    <!-- navigation -->
+    <div class="page">
+        <nav>
+            <ul>
+                <li><a class="link" href="index.html">Home</a></li>
+                <li><a class="link" href="about.html">About</a></li>
+                <li><a class="link" href="projects.html">Projects</a></li>
+                <li><a class="link" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!--main page-->
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1500 800" width="100%" height="100%"
+            class="intro-svg-txt">
+            <defs>
+                <mask id="intro-svg-mask-1">
+                    <polygon points="7789.600537078858, -6167.60048828125
+                                              3310.4001953430184, -2016.6781857754322
+                                              1389.6000487976073, 232.40000000000003
+                                              896.2419565588029, 5640.053536434915
+                                              7789.600537078858, -6167.60048828125" fill="white"></polygon>
+                </mask>
+                <mask id="intro-svg-mask-2">
+                    <polygon points="7789.600537078858, 6632.40048828125
+                                              896.2419565588029, 5640.053536434915
+                                              1389.6000487976073, 232.40000000000003
+                                              -4142.163729329963, 2731.1286574004985
+                                              7789.600537078858, 6632.40048828125" fill="white"></polygon>
+                </mask>
+                <mask id="intro-svg-mask-3">
+                    <polygon points="-5010.400439483643, 6632.400488281251
+                                              -4142.163729329963, 2731.1286574004985
+                                              1389.6000487976073, 232.40000000000003
+                                              -3991.0812068728105, -729.2300154237058
+                                              -5010.400439483643, 6632.400488281251" fill="white"></polygon>
+                </mask>
+                <mask id="intro-svg-mask-4">
+                    <polygon points="-5010.400439483646, -6167.60048828125
+                                              -3991.0812068728105, -729.2300154237058
+                                              1389.6000487976073, 232.40000000000003
+                                              3310.4001953430175, -2016.6781857754336
+                                              -5010.400439483646, -6167.60048828125" fill="white"></polygon>
+                </mask>
+            </defs>
+            <text x="0" y="0" text-anchor="middle" class="svg-txt-filled" mask="url( #intro-svg-mask-1 )">
+                <tspan x="672" y="473" dx="0" dy="0">Hey!</tspan>
+                <tspan x="750" y="630" dx="0" dy="0">I'm Sundar</tspan>
+            </text>
+            <text x="0" y="0" text-anchor="middle" class="svg-txt-stroked" mask="url( #intro-svg-mask-2 )">
+                <tspan x="672" y="473" dx="0" dy="0">Hey!</tspan>
+                <tspan x="750" y="630" dx="0" dy="0">I'm Sundar</tspan>
+            </text>
+            <text x="0" y="0" text-anchor="middle" class="svg-txt-filled" mask="url( #intro-svg-mask-3 )">
+                <tspan x="672" y="473" dx="0" dy="0">Hey!</tspan>
+                <tspan x="750" y="630" dx="0" dy="0">I'm Sundar</tspan>
+            </text>
+            <text x="0" y="0" text-anchor="middle" class="svg-txt-stroked" mask="url( #intro-svg-mask-4 )">
+                <tspan x="672" y="473" dx="0" dy="0">Hey!</tspan>
+                <tspan x="750" y="630" dx="0" dy="0">I'm Sundar</tspan>
+            </text>
+        </svg>
+    </div>
+
+    <!-- cursor -->
+    <div class="circle-cursor circle-cursor--inner"></div>
+    <div class="circle-cursor circle-cursor--outer"></div>
+
+    <!--javascript reference-->
+    <script src="script.js"></script>
+    </div>
+</body>
+
+</html>

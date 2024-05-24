@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('http://fonts.cdnfonts.com/css/delacorso');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: #551fbd;
+  color: #a2eacb;
+}
+
+body {
+  background-color: #cdedfd;
+  background-image: linear-gradient(319deg, #cdedfd 0%, #ffec82 37%, #ffcfd2 100%);
+  font-family: 'Playfair Display', serif;
+  width: 100vw;
+  height: 100vh;
+}
+
+i {
+  opacity: 0;
+  font-size: 18px;
+  color: #fff;
+  will-change: transform;
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Delacorso', sans-serif;
+  font-size: 64px;
+}
+
+h2 {
+  pointer-events: none;
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font: 700 200px/200px Catamaran, sans-serif;
+  overflow: hidden;
+}
+
+.page,
+.page a {
+  cursor: none;
+}
+
+nav {
+  padding: 40px 0;
+  background-color: #cdedfd;
+  background-image: linear-gradient(319deg, #cdedfd 0%, #ffec82 37%, #ffcfd2 100%);
+
+}
+
+nav ul {
+  position: relative;
+  z-index: 9999;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-left: 0;
+}
+
+nav ul li {
+  list-style: none;
+  padding: 0 10px;
+}
+
+nav ul li>a {
+  color: #000;
+  text-decoration: none;
+  padding: 20px 10px;
+  position: relative;
+}
+
+nav ul li>a:hover:after {
+  width: 100%;
+  right: auto;
+  left: 0;
+}
+
+nav ul li>a:after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  left: auto;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in;
+}
+
+.svg-txt-filled {
+  fill: #000;
+  stroke: #000;
+  stroke-width: 2px;
+}
+
+.svg-txt-stroked {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2px;
+}
+
+.circle-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.circle-cursor--outer {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #000;
+  z-index: 12000;
+  opacity: 0.5;
+}
+
+.circle-cursor--inner {
+  width: 5px;
+  height: 5px;
+  left: -2.5px;
+  top: -2.5px;
+  z-index: 11000;
+  background: #000;
+}
+
+/*Project page styles*/
+
+.hero-section {
+  align-items: flex-start;
+  background-color: #fff;
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 100%;
+}
+
+@media(min-width: 540px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(min-width: 960px) {
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  list-style: none;
+  position: relative;
+}
+
+.card:before {
+  content: '';
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+
+.card__background {
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-l);
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  transform: scale(1) translateZ(0);
+  transition:
+    filter 200ms linear,
+    transform 200ms linear;
+}
+
+.card:hover .card__background {
+  transform: scale(1.05) translateZ(0);
+}
+
+.card-grid:hover>.card:not(:hover) .card__background {
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+.card__content {
+  left: 0;
+  padding: var(--spacing-l);
+  position: absolute;
+  top: 0;
+}
+
+.card__category {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-s);
+  text-transform: uppercase;
+}
+
+.card__heading {
+  color: var(--text-lighter);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
+}
